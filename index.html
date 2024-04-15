@@ -4,17 +4,16 @@
     <title>ASHU'SHOPPING</title>
     <style>
         body {
-            background-size: cover;
-            background-position: center;
             font-family: Arial, sans-serif;
             color: #1f1e2a;
-            margin: 0; /* Added to remove default margin */
-            padding: 0; /* Added to remove default padding */
+            margin: 0;
+            padding: 0;
         }
 
         main {
             margin: 15px;
         }
+
         whatsapp {
             text-align: center;
             font-size: 40px;
@@ -37,7 +36,7 @@
             padding: 20px;
             font-size: 50px;
             font-style: italic;
-            text-align: center; /* Centered the header text */
+            text-align: center;
         }
 
         h1 {
@@ -53,16 +52,25 @@
 
         section {
             color: rgb(2, 2, 2);
-            text-align: center; /* Centered the section content */
-            margin-top: 50px; /* Added space between sections */
-            padding: 50px; /* Added padding for better spacing */
+            text-align: center;
+            margin-top: 50px;
+            padding: 50px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
         }
 
         section img {
-            width: 300px; /* Adjusted image width */
-            margin: 20px auto; /* Centered images horizontally */
-            display: block; /* Ensures the image is centered */
-            border-radius: 10px; /* Added border radius for rounded corners */
+            width: 100%; /* Adjusted image width */
+            height: auto; /* Maintain aspect ratio */
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        section .content {
+            position: relative;
+            z-index: 1;
         }
     </style>
 </head>
@@ -81,26 +89,34 @@
         </whatsapp>
 
         <section style="background-image: url('casual.jpg');">
-            <h2>Casual Dresses</h2>
-            <p>Find the perfect blend of comfort and style with our collection of casual dresses. From everyday wear to special occasions, we have something for every taste.</p>
+            <div class="content">
+                <h2>Casual Dresses</h2>
+                <p>Find the perfect blend of comfort and style with our collection of casual dresses. From everyday wear to special occasions, we have something for every taste.</p>
+            </div>
             <img src="casual.jpg" alt="Casual Dress">
         </section>
 
         <section style="background-image: url('kids.jpg');">
-            <h2>Kids Clothing</h2>
-            <p>Dress your little ones in style with our adorable and trendy kids' clothing collection. Explore a variety of options for boys and girls of all ages.</p>
+            <div class="content">
+                <h2>Kids Clothing</h2>
+                <p>Dress your little ones in style with our adorable and trendy kids' clothing collection. Explore a variety of options for boys and girls of all ages.</p>
+            </div>
             <img src="kids.jpg" alt="Kids Clothing">
         </section>
 
         <section style="background-image: url('jeans.webp');">
-            <h2>Jeans</h2>
-            <p>Discover our stylish collection of jeans for men and women. From classic cuts to trendy styles, we have the perfect fit for everyone.</p>
+            <div class="content">
+                <h2>Jeans</h2>
+                <p>Discover our stylish collection of jeans for men and women. From classic cuts to trendy styles, we have the perfect fit for everyone.</p>
+            </div>
             <img src="jeans.webp" alt="Jeans">
         </section>
 
         <section style="background-image: url('tshirts.jpg');">
-            <h2>T-shirts for both men and women</h2>
-            <p>Elevate your casual wardrobe with our range of trendy t-shirts for both men and women. Explore a variety of designs and colors.</p>
+            <div class="content">
+                <h2>T-shirts for both men and women</h2>
+                <p>Elevate your casual wardrobe with our range of trendy t-shirts for both men and women. Explore a variety of designs and colors.</p>
+            </div>
             <img src="tshirts.jpg" alt="T-shirts">
         </section>
     </main>
